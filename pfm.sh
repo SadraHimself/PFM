@@ -8,9 +8,9 @@
 #               ██║     ██║     ██║ ╚═╝ ██║
 #               ╚═╝     ╚═╝     ╚═╝     ╚═╝
 #
-#   Port Forward Manager v1.6
+#                Port Forward Manager v1.6
 #
-#   Telegram: https://t.me/AbrAfagh
+#             Telegram: https://t.me/AbrAfagh
 #
 #══════════════════════════════════════════════════════════════
 

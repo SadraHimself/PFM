@@ -435,14 +435,15 @@ cleanup_old() {
 header() {
     clear
     echo -e "  ${B}${C}"
-    echo -e "   ██████╗ ███████╗███╗   ███╗"
-    echo -e "   ██╔══██╗██╔════╝████╗ ████║"
-    echo -e "   ██████╔╝█████╗  ██╔████╔██║"
-    echo -e "   ██╔═══╝ ██╔══╝  ██║╚██╔╝██║"
-    echo -e "   ██║     ██║     ██║ ╚═╝ ██║"
-    echo -e "   ╚═╝     ╚═╝     ╚═╝     ╚═╝${NC}"
+    echo -e "        ██████╗ ███████╗███╗   ███╗"
+    echo -e "        ██╔══██╗██╔════╝████╗ ████║"
+    echo -e "        ██████╔╝█████╗  ██╔████╔██║"
+    echo -e "        ██╔═══╝ ██╔══╝  ██║╚██╔╝██║"
+    echo -e "        ██║     ██║     ██║ ╚═╝ ██║"
+    echo -e "        ╚═╝     ╚═╝     ╚═╝     ╚═╝${NC}"
     echo -e "  ${C}──────────────────────────────────────────${NC}"
     echo -e "  ${B}${C}       PFM - Port Forward Manager v1.6${NC}"
+    echo -e "  ${GR}  Port Forwarding Tool with Bandwidth Monitoring${NC}"
     echo -e "  ${GR}            https://t.me/AbrAfagh${NC}"
     echo -e "  ${C}──────────────────────────────────────────${NC}\n"
 }

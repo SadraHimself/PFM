@@ -11,7 +11,7 @@
   <p>Port Forwarding Tool with Per-Port Bandwidth Monitoring</p>
 
   <a href="https://t.me/AbrAfagh"><img src="https://img.shields.io/badge/Telegram-Channel-blue?logo=telegram" alt="Telegram"></a>
-  <img src="https://img.shields.io/badge/Version-1.6-green" alt="Version">
+  <img src="https://img.shields.io/badge/Version-1.7-green" alt="Version">
   <img src="https://img.shields.io/badge/License-MIT-yellow" alt="License">
   <img src="https://img.shields.io/badge/OS-Ubuntu%2FDebian-orange" alt="OS">
 </p>
@@ -119,7 +119,7 @@ bash <(curl -s https://raw.githubusercontent.com/SadraHimself/PFM/main/pfm-bot-s
 
 ```
   ──────────────────────────────────────────
-         PFM - Port Forward Manager v1.6
+         PFM - Port Forward Manager v1.7
               https://t.me/AbrAfagh
   ──────────────────────────────────────────
 

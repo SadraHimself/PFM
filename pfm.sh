@@ -8,7 +8,7 @@
 #   ██║     ██║     ██║ ╚═╝ ██║
 #   ╚═╝     ╚═╝     ╚═╝     ╚═╝
 #
-#   Port Forward Manager v1.6
+#   Port Forward Manager v1.7
 #
 #   Telegram: https://t.me/AbrAfagh
 #
@@ -441,7 +441,7 @@ header() {
     echo -e "        ██║     ██║     ██║ ╚═╝ ██║"
     echo -e "        ╚═╝     ╚═╝     ╚═╝     ╚═╝${NC}"
     echo -e "  ${C}──────────────────────────────────────────${NC}"
-    echo -e "  ${B}${C}       PFM - Port Forward Manager v1.6${NC}"
+    echo -e "  ${B}${C}       PFM - Port Forward Manager v1.7${NC}"
     echo -e "  ${GR}            https://t.me/AbrAfagh${NC}"
     echo -e "  ${C}──────────────────────────────────────────${NC}\n"
 }
@@ -541,6 +541,17 @@ CMDEOF
 # ═══════════════ INSTALL ═══════════════
 cmd_install() {
     check_root; header
+    # Self-install: copy script to /usr/local/bin/pfm
+    local src="${BASH_SOURCE[0]:-$0}"
+    if [[ "$src" != "/usr/local/bin/pfm" ]]; then
+        if [[ -f "$src" ]]; then
+            cp "$src" /usr/local/bin/pfm
+        else
+            # Running from curl pipe - download again
+            curl -sL "https://raw.githubusercontent.com/SadraHimself/PFM/main/pfm.sh" -o /usr/local/bin/pfm
+        fi
+        chmod +x /usr/local/bin/pfm
+    fi
     mkdir -p "$USERS_DIR" "$PORTS_DIR" "$USAGE_DIR" "$MTU_DIR" "$REALM_DIR"
     touch "$LOG_FILE"
     sysctl -w net.ipv4.ip_forward=1 > /dev/null 2>&1
@@ -595,8 +606,8 @@ WantedBy=multi-user.target
 EOF
     systemctl daemon-reload
     systemctl enable pfm-restore.service > /dev/null 2>&1
-    echo -e "  ${G}PFM v1.6 installed${NC}"
-    log "PFM v1.6 installed"; sleep 1; cmd_menu
+    echo -e "  ${G}PFM v1.7 installed${NC}"
+    log "PFM v1.7 installed"; sleep 1; cmd_menu
 }
 
 cmd_restore() {
